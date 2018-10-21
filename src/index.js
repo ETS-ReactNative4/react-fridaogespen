@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 
 import NavBar from "./components/navbar";
+//import App from "./components/app";
 
 /*
 import App from './App';
@@ -18,7 +19,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ReactDOM.render(element, document.getElementById("root")); */
 
-//ReactDOM.render(<Counter />, document.getElementById("root"));
+//ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(<NavBar />, document.getElementById("root"));
 
 
