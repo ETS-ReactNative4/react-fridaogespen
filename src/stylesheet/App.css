@@ -42,14 +42,14 @@ body {
   margin-left: 10%;
 }
 /* PAGES */
-.pageContainer {
+#pagesContainer {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
 }
 
-#weddingdayContainer {
+.pageContainer {
   background-color: rgba(255, 255, 255, 50%);
   padding: 5%;
 }
@@ -67,7 +67,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 3;
   }
-  .pageContainer {
+  #pagesContainer {
     grid-column-start: 2;
     grid-column-end: 3;
   }

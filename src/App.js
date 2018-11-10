@@ -12,7 +12,7 @@ class App extends Component {
         <div className="appHeader">
           <NavBar />
         </div>
-        <div className="pageContainer">
+        <div id="pagesContainer">
           <Pages />
         </div>
       </div>
