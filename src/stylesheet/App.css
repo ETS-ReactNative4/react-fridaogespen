@@ -19,6 +19,7 @@ body {
   height: 40vmin;
 } */
 
+/* NAVBAR */
 .appHeader {
   align-items: center;
   justify-content: center;
@@ -38,6 +39,15 @@ body {
 
 #navbarItemlist {
   margin-left: 10%;
+}
+/* PAGES */
+.pageContainer {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  background-color: rgba(255, 255, 255, 50%);
+
 }
 
 @media screen and (max-width: 1000px) {

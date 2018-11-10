@@ -8,7 +8,6 @@ import {
   NavItem,
   NavLink
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
 import "../stylesheet/App.css";
 
 class NavBar extends React.Component {
@@ -16,12 +15,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       collapse: false,
-      isWideEnough: false,
-      pageImages: false,
-      pageWeddingday: false,
-      pageWishlist: false,
-      pageContacts: false,
-      pageRSVP: false
+      isWideEnough: false
     };
     this.collapseOnClick = this.collapseOnClick.bind(this);
   }
@@ -32,42 +26,80 @@ class NavBar extends React.Component {
     });
   }
 
-  showPage() {
-    
-  }
-
   render() {
     return (
-      <Router>
-        <Navbar light expand="md" scrolling id="navbarContainer">
-          <NavbarBrand id="navbarHeader">
-            <strong>Frida&Espen</strong>
-          </NavbarBrand>
-          {!this.state.isWideEnough && <NavbarToggler onClick={this.collapseOnClick} />}
-          <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav center id="navbarItemlist">
-              <NavItem active>
-                <NavLink className="navLink" value="frontPage" to="#">Forside</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">Bilder</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">Bryllupsside</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">Ønskeliste</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">Kontakter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">RSVP</NavLink>
-              </NavItem>
-            </NavbarNav>
-          </Collapse>
-        </Navbar>
-      </Router>
+      <Navbar light expand="md" scrolling id="navbarContainer">
+        <NavbarBrand id="navbarHeader">
+          <strong>Frida&Espen</strong>
+        </NavbarBrand>
+        {!this.state.isWideEnough && (
+          <NavbarToggler onClick={this.collapseOnClick} />
+        )}
+        <Collapse isOpen={this.state.collapse} navbar>
+          <NavbarNav center id="navbarItemlist">
+            <NavItem active>
+              <NavLink
+                className="navLink"
+                value="frontPage"
+                to="/"
+                onClick={this.togglePages}
+              >
+                Forside
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className="navLink"
+                value="imagePage"
+                to="/images"
+                onClick={this.togglePages}
+              >
+                Bilder
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className="navLink"
+                value="weddingdayPage"
+                to="/weddingday"
+                onClick={this.togglePages}
+              >
+                Bryllupsdagen
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className="navLink"
+                value="wishlistPage"
+                to="wishlist"
+                onClick={this.togglePages}
+              >
+                Ønskeliste
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className="navLink"
+                value="contactsPage"
+                to="/contacts"
+                onClick={this.togglePages}
+              >
+                Kontakter
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className="navLink"
+                value="rsvpPage"
+                to="/rsvp"
+                onClick={this.togglePages}
+              >
+                RSVP
+              </NavLink>
+            </NavItem>
+          </NavbarNav>
+        </Collapse>
+      </Navbar>
     );
   }
 }
