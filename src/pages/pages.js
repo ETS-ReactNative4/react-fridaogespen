@@ -9,7 +9,7 @@ class Pages extends Component {
   render() {
     return (
       <div>
-        <Route path="/" component={Home} />
+        <Route exact={true} path="/" component={Home} />
         {/* <Route path="/images" component={Images} /> */}
         <Route path="/weddingday" component={Weddingday} />
         {/* <Route path="/wishlist" component={Wishlist} /> */}
