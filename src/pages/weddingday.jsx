@@ -4,7 +4,7 @@ class Weddingday extends Component {
   state = {};
   render() {
     return (
-      <div id="weddingdayContainer">
+      <div className="pageContainer">
         <h1>Bryllupsdagen</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
