@@ -15,10 +15,10 @@ class RSVP extends Component {
   canBeSubmitted() {
     const { firstName, lastName, email } = this.state;
     let result =
-        firstName.length > 1 &&
-        lastName.length > 1 &&
-        email.length > 0 &&
-        email.includes("@") === true;
+      firstName.length > 1 &&
+      lastName.length > 1 &&
+      email.length > 0 &&
+      email.includes("@") === true;
     return result;
   }
 
@@ -69,25 +69,81 @@ class RSVP extends Component {
             <label className="otherLabel">Allergier eller annet:</label>
             <textarea className="otherInput" type="textarea" name="other" />
 
-            <label className="rsvpLabel">Kommer du i bryllupet vårt?</label>
-            <div className="radioInput">
-              <label for="radioYes" className="radioYes">
+            <label className="musicLabel">Musikkønsker:</label>
+            <textarea className="musicInput" type="textarea" name="music" />
+
+            <label className="rsvpFridayLabel">Vil du delta på fredag?</label>
+            <div className="rsvpFridayInput">
+              <label for="radioFridayYes" className="radioFridayYes">
                 Ja
                 <input
                   type="radio"
-                  id="radioYes"
-                  name="rsvp"
+                  id="radioFridayYes"
+                  name="rsvpFriday"
                   value="Yes"
                   checked
                 />
               </label>
 
-              <label for="radioNo" className="radioNo">
+              <label for="radioFridayNo" className="radioFridayNo">
                 Nei
-                <input type="radio" id="radioNo" name="rsvp" value="No" />
+                <input type="radio" id="radioFridayNo" name="rsvpFriday" value="No" />
               </label>
             </div>
-            {/*<button disabled={!isEnabled}>Sign up</button>*/}
+
+            <label className="rsvpFridayExtraLabel">
+              Hvis ja, ønsker du å være med på middag, underholdning, eller
+              begge deler??
+            </label>
+            <div className="rsvpFridayExtraInput">
+              <label for="checkFridayDinner" className="checkFridayDinner">
+                Middag
+                <input
+                  type="checkbox"
+                  id="checkFridayDinner"
+                  name="rsvpFridayExtra"
+                  value="Dinner"
+                />
+              </label>
+
+              <label
+                for="checkFridayEntertainment"
+                className="checkFridayEntertainment"
+              >
+                Underholdning
+                <input
+                  type="checkbox"
+                  id="checkFridayEntertainment"
+                  name="rsvpFridayExtra"
+                  value="Entertainment"
+                />
+              </label>
+            </div>
+
+            <label className="rsvpSaturdayLabel">Vil du delta på lørdag?</label>
+            <div className="rsvpSaturdayInput">
+              <label for="radioSaturdayYes" className="radioSaturdayYes">
+                Ja
+                <input
+                  type="radio"
+                  id="radioSaturdayYes"
+                  name="rsvpSaturday"
+                  value="Yes"
+                  checked
+                />
+              </label>
+
+              <label for="radioSaturdayNo" className="radioSaturdayNo">
+                Nei
+                <input
+                  type="radio"
+                  id="radioSaturdayNo"
+                  name="rsvpSaturday"
+                  value="No"
+                />
+              </label>
+            </div>
+
             <input
               disabled={!isEnabled}
               className="rsvpSubmit"

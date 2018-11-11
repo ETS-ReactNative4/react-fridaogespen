@@ -75,7 +75,7 @@ body {
   grid-row-end: 2;
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   grid-row-gap: 15px;
   grid-column-gap: 15px;
 }
@@ -122,38 +122,6 @@ body {
   grid-column-end: 2;
 }
 
-.rsvpLabel {
-  grid-row-start: 5;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-
-.radioInput {
-  grid-row-start: 5;
-  grid-row-end: 5;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  display: grid;
-  grid-template-columns: 20% 20%;
-}
-
-.radioYes {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  text-align: center;
-}
-
-#radioYes, #radioNo {
-  margin-left: 5px;
-}
-
-.radioNo {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  text-align: center;
-}
-
 .otherLabel {
   grid-row-start: 4;
   grid-row-end: 4;
@@ -168,9 +136,127 @@ body {
   grid-column-end: 2;
 }
 
-.rsvpSubmit {
+.musicLabel {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.musicInput {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.rsvpFridayLabel {
   grid-row-start: 6;
   grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.rsvpFridayInput {
+  grid-row-start: 6;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.radioFridayYes {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.radioFridayNo {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#radioFridayYes,
+#radioFridayNo,
+#checkFridayDinner,
+#checkFridayEntertainment,
+#radioSaturdayYes,
+#radioSaturdayNo {
+  margin-left: 5px;
+}
+
+.rsvpFridayInput,
+.rsvpFridayExtraInput,
+.rsvpSaturdayInput {
+  border: 1px solid;
+}
+
+.radioFridayYes,
+.radioFridayNo,
+.checkFridayDinner,
+.checkFridayEntertainment,
+.radioSaturdayYes,
+.radioSaturdayNo {
+  margin: auto;
+  text-align: center;
+
+}
+
+.rsvpFridayExtraLabel {
+  grid-row-start: 7;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.rsvpFridayExtraInput {
+  grid-row-start: 7;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.checkFridayDinner {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.checkFridayEntertainment {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.rsvpSaturdayLabel {
+  grid-row-start: 8;
+  grid-row-end: 8;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.rsvpSaturdayInput {
+  grid-row-start: 8;
+  grid-row-end: 8;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.radioSaturdayYes {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.radioSaturdayNo {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.rsvpSubmit {
+  grid-row-start: 9;
+  grid-row-end: 9;
   grid-column-start: 1;
   grid-column-end: 3;
 }
