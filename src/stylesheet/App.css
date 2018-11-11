@@ -54,6 +54,127 @@ body {
   padding: 5%;
 }
 
+.rsvpContainer {
+  background-color: rgba(255, 255, 255, 70%);
+  padding: 5%;
+  text-align: left;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+#rsvpHeader {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  text-align: center;
+}
+
+.inputContainer {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 20% 80%;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.firstNameLabel {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.firstNameInput {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.lastNameLabel {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.lastNameInput {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.emailLabel {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.emailInput {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.rsvpLabel {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.radioInput {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-columns: 20% 20%;
+}
+
+.radioYes {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  text-align: center;
+}
+
+#radioYes, #radioNo {
+  margin-left: 5px;
+}
+
+.radioNo {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  text-align: center;
+}
+
+.otherLabel {
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.otherInput {
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.rsvpSubmit {
+  grid-row-start: 6;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 @media screen and (max-width: 1000px) {
   body {
     background-position: 43% 0;
