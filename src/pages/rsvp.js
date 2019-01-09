@@ -4,11 +4,11 @@ export default class RSVP extends Component {
   state = {
     people: [],
     person: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      other: "",
-      music: "",
+      firstName: "mokkkkk",
+      lastName: "afdhsdfjaf",
+      email: "aadfh@afhad.no",
+      other: "afh",
+      music: "lalalallaa",
       fridayAttendance: true,
       fridayDinner: false,
       fridayEntertainment: false,
@@ -16,26 +16,8 @@ export default class RSVP extends Component {
     }
   };
 
-  handleFirstName = evt =>
-    this.setState({ person: { firstName: evt.target.value } });
-  handleLastName = evt =>
-    this.setState({ person: { lastName: evt.target.value } });
-  handleEmail = evt => this.setState({ person: { email: evt.target.value } });
-  handleOther = evt => this.setState({ person: { other: evt.target.value } });
-  handleMusic = evt => this.setState({ person: { music: evt.target.value } });
-  handleFridayAttendance = evt =>
-    this.setState({ person: { fridayAttendance: evt.target.value } });
-  handleFridayDinner = evt =>
-    this.setState({ person: { fridayDinner: evt.target.value } });
-  handleFridayEntertainment = evt =>
-    this.setState({ person: { fridayEntertainment: evt.target.value } });
-  handleSaturdayAttendance = evt =>
-    this.setState({ person: { saturdayAttendance: evt.target.value } });
-
   canBeSubmitted() {
-    console.log(this.state.person.firstName.length);
-
-    const result =
+    let result =
       this.state.person.firstName.length > 1 &&
       this.state.person.lastName.length > 1 &&
       this.state.person.email.length > 0 &&
@@ -43,68 +25,46 @@ export default class RSVP extends Component {
     return result;
   }
 
-  addPerson() {
-    const { person } = this.state;
-    fetch(
-      `http://localhost:4000/person/add?firstName=${
-        person.firstName
-      }&lastName=${person.lastName}&email=${person.email}&other=${
-        person.other
-      }&music=${person.music}&fridayAttendance=${
-        person.fridayAttendance
-      }&fridayDinner=${person.fridayDinner}&fridayEntertainment=${
-        person.fridayEntertainment
-      }&saturdayAttendance=${person.saturdayAttendance}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json"
-        },
-        body: JSON.stringify(person)
-      }
-    );
+  renderPerson = ({ id, firstName }) => <div key={id}>{firstName}</div>;
+
+  componentDidMount() {
+    this.getPerson();
   }
 
-  renderPerson = ({
-    id,
-    firstname,
-    lastname,
-    email,
-    other,
-    music,
-    fridayAttendance,
-    fridayDinner,
-    fridayEntertainment,
-    saturdayAttendance
-  }) => (
-    <div key={id}>
-      {
-        (firstname,
-        lastname,
-        email,
-        other,
-        music,
-        fridayAttendance,
-        fridayDinner,
-        fridayEntertainment,
-        saturdayAttendance)
-      }
-    </div>
-  );
+  getPerson = _ => {
+    fetch("http://localhost:4000/person/")
+      .then(response => response.json())
+      //.then(response => this.setState({ people: response.data }))
+      .catch(err => console.error(err));
+  };
 
-  handleSubmit = evt => {
+  addPerson = _ => {
+    const { person } = this.state;
+    fetch(`http://localhost:4000/person/add?firstName=${person.firstName}
+      &lastName=${person.lastName}
+      &email=${person.email}
+      &other=${person.other}
+      &music=${person.music}
+      &fridayAttendance=${person.fridayAttendance}
+      &fridayDinner=${person.fridayDinner}
+      &fridayEntertainment=${person.fridayEntertainment}
+      &saturdayAttendance=${person.saturdayAttendance}`)
+      .then(this.getPerson)
+      .catch(err => console.error(err));
+  };
+
+  /*   handleSubmit = evt => {
     if (!this.canBeSubmitted()) {
       evt.preventDefault();
       //return;
     } else {
       // actual submit logic...
-      return evt.addPerson();
+      evt.addPerson();
     }
-  };
+  }; */
 
   render() {
     const { people, person } = this.state;
-
     return (
       <div className="rsvpContainer">
         {people.map(this.renderPerson)}
@@ -117,8 +77,12 @@ export default class RSVP extends Component {
               type="text"
               name="firstName"
               required
-              onChange={this.handleFirstName.bind(this)}
               value={person.firstName}
+              onChange={e =>
+                this.setState({
+                  person: { ...person, firstName: e.target.value }
+                })
+              }
             />
 
             <label className="lastNameLabel">Etternavn: * </label>
@@ -127,8 +91,12 @@ export default class RSVP extends Component {
               type="text"
               name="lastName"
               required
-              onChange={this.handleLastName.bind(this)}
               value={person.lastName}
+              onChange={e =>
+                this.setState({
+                  person: { ...person, lastName: e.target.value }
+                })
+              }
             />
 
             <label className="emailLabel">Epost: * </label>
@@ -138,8 +106,12 @@ export default class RSVP extends Component {
               name="email"
               pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
               required
-              onChange={this.handleEmail.bind(this)}
               value={person.email}
+              onChange={e =>
+                this.setState({
+                  person: { ...person, email: e.target.value }
+                })
+              }
             />
 
             <label className="otherLabel">Allergier eller annet:</label>
@@ -147,8 +119,12 @@ export default class RSVP extends Component {
               className="otherInput"
               type="textarea"
               name="other"
-              onChange={this.handleOther.bind(this)}
               value={person.other}
+              onChange={e =>
+                this.setState({
+                  person: { ...person, other: e.target.value }
+                })
+              }
             />
 
             <label className="musicLabel">Musikkønsker:</label>
@@ -156,21 +132,31 @@ export default class RSVP extends Component {
               className="musicInput"
               type="textarea"
               name="music"
-              onChange={this.handleMusic.bind(this)}
               value={person.music}
+              onChange={e =>
+                this.setState({
+                  person: { ...person, music: e.target.value }
+                })
+              }
             />
 
             <label className="rsvpFridayLabel">Vil du delta på fredag? *</label>
-            <div className="rsvpFridayInput">
+            <div
+              className="rsvpFridayInput"
+              onChange={e =>
+                this.setState({
+                  person: { ...person, fridayAttendance: e.target.value }
+                })
+              }
+            >
               <label for="radioFridayYes" className="radioFridayYes">
                 Ja
                 <input
                   type="radio"
                   id="radioFridayYes"
                   name="fridayAttendance"
-                  value="Yes"
+                  value="true"
                   checked
-                  onChange={this.handleFridayAttendance.bind(this)}
                 />
               </label>
 
@@ -180,8 +166,7 @@ export default class RSVP extends Component {
                   type="radio"
                   id="radioFridayNo"
                   name="fridayAttendance"
-                  value="No"
-                  onChange={this.handleFridayAttendance.bind(this)}
+                  value="false"
                 />
               </label>
             </div>
@@ -197,8 +182,12 @@ export default class RSVP extends Component {
                   type="checkbox"
                   id="checkFridayDinner"
                   name="fridayDinner"
-                  value="Dinner"
-                  onChange={this.handleFridayDinner.bind(this)}
+                  value={person.fridayDinner}
+                  onChange={e =>
+                    this.setState({
+                      person: { ...person, fridayDinner: e.target.value }
+                    })
+                  }
                 />
               </label>
 
@@ -211,8 +200,12 @@ export default class RSVP extends Component {
                   type="checkbox"
                   id="checkFridayEntertainment"
                   name="fridayEntertainment"
-                  value="Entertainment"
-                  onChange={this.handleFridayEntertainment.bind(this)}
+                  value={person.fridayEntertainment}
+                  onChange={e =>
+                    this.setState({
+                      person: { ...person, fridayEntertainment: e.target.value }
+                    })
+                  }
                 />
               </label>
             </div>
@@ -220,16 +213,22 @@ export default class RSVP extends Component {
             <label className="rsvpSaturdayLabel">
               Vil du delta på lørdag? *
             </label>
-            <div className="rsvpSaturdayInput">
+            <div
+              className="rsvpSaturdayInput"
+              onChange={e =>
+                this.setState({
+                  person: { ...person, saturdayAttendance: e.target.value }
+                })
+              }
+            >
               <label for="radioSaturdayYes" className="radioSaturdayYes">
                 Ja
                 <input
                   type="radio"
                   id="radioSaturdayYes"
                   name="saturdayAttendance"
-                  value="Yes"
+                  value="true"
                   checked
-                  onChange={this.handleSaturdayAttendance.bind(this)}
                 />
               </label>
 
@@ -239,8 +238,7 @@ export default class RSVP extends Component {
                   type="radio"
                   id="radioSaturdayNo"
                   name="saturdayAttendance"
-                  value="No"
-                  onChange={this.handleSaturdayAttendance.bind(this)}
+                  value="false"
                 />
               </label>
             </div>
@@ -250,7 +248,7 @@ export default class RSVP extends Component {
               className="rsvpSubmit"
               type="submit"
               value="Registrer"
-              onClick={() => this.handleSubmit()}
+              onClick={this.addPerson}
             />
           </div>
         </form>
