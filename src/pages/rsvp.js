@@ -1,20 +1,24 @@
 import React, { Component } from "react";
 
 export default class RSVP extends Component {
-  state = {
-    people: [],
-    person: {
-      firstName: "mokkkkk",
-      lastName: "afdhsdfjaf",
-      email: "aadfh@afhad.no",
-      other: "afh",
-      music: "lalalallaa",
-      fridayAttendance: true,
-      fridayDinner: false,
-      fridayEntertainment: false,
-      saturdayAttendance: true
-    }
-  };
+  constructor() {
+    super();
+    this.state = {
+      people: [],
+      person: {
+        firstName: "mokkkkk",
+        lastName: "afdhsdfjaf",
+        email: "aadfh@afhad.no",
+        other: "afh",
+        music: "lalalallaa",
+        fridayAttendance: true,
+        fridayDinner: false,
+        fridayEntertainment: false,
+        saturdayAttendance: true
+      }
+    };
+    //this.onSubmit = this.handleSubmit.bind(this);
+  }
 
   canBeSubmitted() {
     let result =
@@ -32,7 +36,7 @@ export default class RSVP extends Component {
   }
 
   getPerson = _ => {
-    fetch("http://localhost:4000/person/")
+    fetch("fridaogespen01.mysql.domeneshop.no/")
       .then(response => response.json())
       //.then(response => this.setState({ people: response.data }))
       .catch(err => console.error(err));
@@ -40,7 +44,7 @@ export default class RSVP extends Component {
 
   addPerson = _ => {
     const { person } = this.state;
-    fetch(`http://localhost:4000/person/add?firstName=${person.firstName}
+    fetch(`fridaogespen01.mysql.domeneshop.no/add?firstName=${person.firstName}
       &lastName=${person.lastName}
       &email=${person.email}
       &other=${person.other}
@@ -53,15 +57,29 @@ export default class RSVP extends Component {
       .catch(err => console.error(err));
   };
 
-  /*   handleSubmit = evt => {
-    if (!this.canBeSubmitted()) {
+  handleSubmit = evt => {
+    //if (!this.canBeSubmitted()) {
+    if (!evt.target.checkValidity()) {
       evt.preventDefault();
       //return;
     } else {
-      // actual submit logic...
-      evt.addPerson();
+      var self = this;
+      // On submit of the form, send a POST request with the data to the server.
+      fetch("/add", {
+        method: "POST",
+        data: {
+          name: self.refs.name,
+          job: self.refs.job
+        }
+      })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(body) {
+          console.log(body);
+        });
     }
-  }; */
+  };
 
   render() {
     const { people, person } = this.state;
@@ -69,7 +87,8 @@ export default class RSVP extends Component {
       <div className="rsvpContainer">
         {people.map(this.renderPerson)}
         <h1 id="rsvpHeader">RSVP</h1>
-        <form>
+        {/* <form onChange={this.handleSubmit}> */}
+          <form onSubmit={this.onSubmit}>
           <div className="inputContainer">
             <label className="firstNameLabel">Fornavn: *</label>
             <input
