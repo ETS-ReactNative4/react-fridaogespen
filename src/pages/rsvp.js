@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import ToggleDisplay from "react-toggle-display";
 
 export default class RSVP extends Component {
   constructor() {
     super();
     this.state = {
+      show: false,
       people: [],
       person: {
         firstName: "test",
@@ -16,7 +18,6 @@ export default class RSVP extends Component {
         fridayEntertainment: false,
         saturdayAttendance: false
       }
-      //collapse: true
     };
   }
 
@@ -66,8 +67,8 @@ export default class RSVP extends Component {
 
   toggleFridayAttendance = () => {
     this.setState({
-      fridayAttendance: !this.state.fridayAttendance
-      //collapse: !this.state.collapse
+      fridayAttendance: !this.state.fridayAttendance,
+      show: !this.state.show
     });
   };
 
@@ -214,7 +215,10 @@ export default class RSVP extends Component {
               </label>
             </div>
 
-            <div class="fridayExtraCollapse" >
+            <ToggleDisplay
+              show={this.state.show}
+              class="fridayExtraCollapse"
+            >
               <label className="rsvpFridayExtraLabel">
                 Hvis du kommer på fredag, ønsker du å være med på middag,
                 underholdning, eller begge deler?
@@ -259,7 +263,7 @@ export default class RSVP extends Component {
                   />
                 </label>
               </div>
-            </div>
+            </ToggleDisplay>
 
             <input
               disabled={!this.canBeSubmitted()}

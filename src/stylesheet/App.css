@@ -18,11 +18,6 @@ html {
   grid-column-gap: 15px;
 }
 
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-} */
-
 /* NAVBAR */
 .appHeader {
   align-items: center;
@@ -202,17 +197,12 @@ html {
   text-align: center;
 }
 
-#checkFridayAttendance:checked ~ .fridayExtraCollapse {
-  /* display: grid !important; */
-  background-color: red;
-}
-
 .fridayExtraCollapse {
   grid-row-start: 7;
   grid-row-end: 7;
   grid-column-start: 1;
   grid-column-end: 3;
-  display: none;
+  display: grid;
   grid-template-columns: 30% 68%;
   grid-row-gap: 15px;
   grid-column-gap: 15px;
