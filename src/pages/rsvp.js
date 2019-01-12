@@ -6,18 +6,18 @@ export default class RSVP extends Component {
     this.state = {
       people: [],
       person: {
-        firstName: "mokkkkk",
-        lastName: "afdhsdfjaf",
-        email: "aadfh@afhad.no",
-        other: "afh",
-        music: "lalalallaa",
-        fridayAttendance: true,
+        firstName: "test",
+        lastName: "testesen",
+        email: "haha@haha.no",
+        other: "hed",
+        music: "adfh",
+        fridayAttendance: false,
         fridayDinner: false,
         fridayEntertainment: false,
-        saturdayAttendance: true
+        saturdayAttendance: false
       }
+      //collapse: true
     };
-    //this.onSubmit = this.handleSubmit.bind(this);
   }
 
   canBeSubmitted() {
@@ -36,15 +36,16 @@ export default class RSVP extends Component {
   }
 
   getPerson = _ => {
-    fetch("fridaogespen01.mysql.domeneshop.no/")
+    fetch("http://localhost:3306")
       .then(response => response.json())
-      //.then(response => this.setState({ people: response.data }))
+      //then(response => this.setState({ people: response.data }))
       .catch(err => console.error(err));
   };
 
   addPerson = _ => {
     const { person } = this.state;
-    fetch(`fridaogespen01.mysql.domeneshop.no/add?firstName=${person.firstName}
+    fetch(
+      fetch(`http://localhost:3306/add?firstName=${person.firstName}
       &lastName=${person.lastName}
       &email=${person.email}
       &other=${person.other}
@@ -52,43 +53,50 @@ export default class RSVP extends Component {
       &fridayAttendance=${person.fridayAttendance}
       &fridayDinner=${person.fridayDinner}
       &fridayEntertainment=${person.fridayEntertainment}
-      &saturdayAttendance=${person.saturdayAttendance}`)
-      .then(this.getPerson)
-      .catch(err => console.error(err));
+      &saturdayAttendance=${person.saturdayAttendance}`),
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(person)
+      }
+    );
   };
 
-  handleSubmit = evt => {
-    //if (!this.canBeSubmitted()) {
-    if (!evt.target.checkValidity()) {
-      evt.preventDefault();
-      //return;
-    } else {
-      var self = this;
-      // On submit of the form, send a POST request with the data to the server.
-      fetch("/add", {
-        method: "POST",
-        data: {
-          name: self.refs.name,
-          job: self.refs.job
-        }
-      })
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(body) {
-          console.log(body);
-        });
-    }
+  toggleFridayAttendance = () => {
+    this.setState({
+      fridayAttendance: !this.state.fridayAttendance
+      //collapse: !this.state.collapse
+    });
+  };
+
+  toggleDinnerChange = () => {
+    this.setState({
+      fridayDinner: !this.state.fridayDinner
+    });
+  };
+
+  toggleEntertainmentChange = () => {
+    this.setState({
+      fridayEntertainment: !this.state.fridayEntertainment
+    });
+  };
+
+  toggleSaturdayAttendance = () => {
+    this.setState({
+      saturdayAttendance: !this.state.saturdayAttendance
+    });
   };
 
   render() {
     const { people, person } = this.state;
+
     return (
       <div className="rsvpContainer">
         {people.map(this.renderPerson)}
         <h1 id="rsvpHeader">RSVP</h1>
-        {/* <form onChange={this.handleSubmit}> */}
-          <form onSubmit={this.onSubmit}>
+        <form>
           <div className="inputContainer">
             <label className="firstNameLabel">Fornavn: *</label>
             <input
@@ -159,107 +167,98 @@ export default class RSVP extends Component {
               }
             />
 
-            <label className="rsvpFridayLabel">Vil du delta på fredag? *</label>
-            <div
-              className="rsvpFridayInput"
-              onChange={e =>
-                this.setState({
-                  person: { ...person, fridayAttendance: e.target.value }
-                })
-              }
-            >
-              <label for="radioFridayYes" className="radioFridayYes">
-                Ja
-                <input
-                  type="radio"
-                  id="radioFridayYes"
-                  name="fridayAttendance"
-                  value="true"
-                  checked
-                />
-              </label>
-
-              <label for="radioFridayNo" className="radioFridayNo">
-                Nei
-                <input
-                  type="radio"
-                  id="radioFridayNo"
-                  name="fridayAttendance"
-                  value="false"
-                />
-              </label>
-            </div>
-
-            <label className="rsvpFridayExtraLabel">
-              Hvis ja, ønsker du å være med på middag, underholdning, eller
-              begge deler?
+            <label className="rsvpDayLabel">
+              Hvilke dager kan du delta på? (Hvis du ikke sjekker av noen
+              alternativer, antar vi at du ikke kan komme noen av dagene)
             </label>
-            <div className="rsvpFridayExtraInput">
-              <label for="checkFridayDinner" className="checkFridayDinner">
-                Middag
+            <div className="rsvpDayInput">
+              <label
+                for="checkFridayAttendance"
+                className="checkFridayAttendance"
+              >
+                Fredag
                 <input
                   type="checkbox"
-                  id="checkFridayDinner"
-                  name="fridayDinner"
-                  value={person.fridayDinner}
+                  id="checkFridayAttendance"
+                  name="fridayAttendance"
+                  checked={person.fridayAttendance}
+                  onClick={this.toggleFridayAttendance}
                   onChange={e =>
                     this.setState({
-                      person: { ...person, fridayDinner: e.target.value }
+                      person: { ...person, fridayAttendance: e.target.checked }
                     })
                   }
                 />
               </label>
 
               <label
-                for="checkFridayEntertainment"
-                className="checkFridayEntertainment"
+                for="checkSaturdayAttendance"
+                className="checkSaturdayAttendance"
               >
-                Underholdning
+                Lørdag
                 <input
                   type="checkbox"
-                  id="checkFridayEntertainment"
-                  name="fridayEntertainment"
-                  value={person.fridayEntertainment}
+                  id="checkSaturdayAttendance"
+                  name="saturdayAttendance"
+                  checked={person.saturdayAttendance}
+                  onClick={this.toggleSaturdayAttendance}
                   onChange={e =>
                     this.setState({
-                      person: { ...person, fridayEntertainment: e.target.value }
+                      person: {
+                        ...person,
+                        saturdayAttendance: e.target.checked
+                      }
                     })
                   }
                 />
               </label>
             </div>
 
-            <label className="rsvpSaturdayLabel">
-              Vil du delta på lørdag? *
-            </label>
-            <div
-              className="rsvpSaturdayInput"
-              onChange={e =>
-                this.setState({
-                  person: { ...person, saturdayAttendance: e.target.value }
-                })
-              }
-            >
-              <label for="radioSaturdayYes" className="radioSaturdayYes">
-                Ja
-                <input
-                  type="radio"
-                  id="radioSaturdayYes"
-                  name="saturdayAttendance"
-                  value="true"
-                  checked
-                />
+            <div class="fridayExtraCollapse" >
+              <label className="rsvpFridayExtraLabel">
+                Hvis du kommer på fredag, ønsker du å være med på middag,
+                underholdning, eller begge deler?
               </label>
 
-              <label for="radioSaturdayNo" className="radioSaturdayNo">
-                Nei
-                <input
-                  type="radio"
-                  id="radioSaturdayNo"
-                  name="saturdayAttendance"
-                  value="false"
-                />
-              </label>
+              <div className="rsvpFridayExtraInput">
+                <label for="checkFridayDinner" className="checkFridayDinner">
+                  Middag
+                  <input
+                    type="checkbox"
+                    id="checkFridayDinner"
+                    name="fridayDinner"
+                    checked={person.fridayDinner}
+                    onClick={this.toggleDinnerChange}
+                    onChange={e =>
+                      this.setState({
+                        person: { ...person, fridayDinner: e.target.checked }
+                      })
+                    }
+                  />
+                </label>
+
+                <label
+                  for="checkFridayEntertainment"
+                  className="checkFridayEntertainment"
+                >
+                  Underholdning
+                  <input
+                    type="checkbox"
+                    id="checkFridayEntertainment"
+                    name="fridayEntertainment"
+                    checked={person.fridayEntertainment}
+                    onClick={this.toggleEntertainmentChange}
+                    onChange={e =>
+                      this.setState({
+                        person: {
+                          ...person,
+                          fridayEntertainment: e.target.checked
+                        }
+                      })
+                    }
+                  />
+                </label>
+              </div>
             </div>
 
             <input
@@ -267,7 +266,7 @@ export default class RSVP extends Component {
               className="rsvpSubmit"
               type="submit"
               value="Registrer"
-              onClick={this.addPerson}
+              onClick={() => this.addPerson()}
             />
           </div>
         </form>

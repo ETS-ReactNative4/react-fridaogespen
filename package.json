@@ -2,11 +2,13 @@
   "name": "react-fridaogespen",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.fridaogespen.no/",
   "dependencies": {
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "mariasql": "^0.2.6",
     "mdbreact": "^4.8.1",
     "mysql": "^2.16.0",
     "react": "^16.5.2",
@@ -21,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
