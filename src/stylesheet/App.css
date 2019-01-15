@@ -51,11 +51,13 @@ html {
 .pageContainer {
   background-color: rgba(255, 255, 255, 50%);
   padding: 5%;
+  margin-bottom: 20px;
 }
 
 .rsvpContainer {
   background-color: rgba(255, 255, 255, 70%);
   padding: 5% 3% 5% 3%;
+  margin-bottom: 20px;
   text-align: left;
   display: grid;
   grid-template-rows: auto auto;
@@ -66,7 +68,26 @@ html {
 #rsvpHeader {
   grid-row-start: 1;
   grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
   text-align: center;
+}
+
+#rsvpP {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+#rsvpForm {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  height: 1100px;
 }
 
 .inputContainer {
