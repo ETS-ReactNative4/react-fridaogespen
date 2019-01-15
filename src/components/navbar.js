@@ -39,10 +39,12 @@ class NavBar extends React.Component {
         )}
         <Collapse isOpen={this.state.collapse} navbar>
           <NavbarNav center id="navbarItemlist">
-
           
             <NavItem>
-              <NavLink className="navLink" to="/" onClick={this.togglePages}>
+              <NavLink
+              className="navLink"
+              to="/"
+              onClick={this.togglePages}>
                 Forside
               </NavLink>
             </NavItem>

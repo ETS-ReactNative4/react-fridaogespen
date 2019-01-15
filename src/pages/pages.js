@@ -7,7 +7,7 @@ import Images from "./images.jsx";
 import Weddingday from "./weddingday.jsx";
 import Wishlist from "./wishlist.jsx";
 import Contacts from "./contacts.jsx";
-import RSVP from "./rsvp.jsx";
+import RSVP from "./rsvp.js";
 
 class Pages extends Component {
   render() {
