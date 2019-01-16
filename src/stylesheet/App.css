@@ -54,6 +54,37 @@ html {
   margin-bottom: 20px;
 }
 
+.imageContainer {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: auto auto auto;
+}
+
+#imageHeader {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#imageCarousel {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.carousel-slider {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel.carousel-slider {
+  margin: auto !important;
+  width: 60% !important;
+}
+
 .rsvpContainer {
   background-color: rgba(255, 255, 255, 70%);
   padding: 5% 3% 5% 3%;
@@ -294,5 +325,9 @@ html {
   }
   #navbarItemlist {
     margin-left: 0;
+  }
+  .carousel.carousel-slider {
+    margin: 0 !important;
+    width: 100% !important;
   }
 }
