@@ -40,6 +40,7 @@ html {
 #navbarItemlist {
   margin-left: 10%;
 }
+
 /* PAGES */
 #pagesContainer {
   grid-column-start: 3;
@@ -49,11 +50,12 @@ html {
 }
 
 .pageContainer {
-  background-color: rgba(255, 255, 255, 50%);
+  background-color: rgba(255, 255, 255, 70%);
   padding: 5%;
   margin-bottom: 20px;
 }
 
+/* IMAGES */
 .imageContainer {
   display: grid;
   grid-template-columns: 30% 40% 30%;
@@ -61,15 +63,13 @@ html {
 }
 
 #imageHeader {
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row: 1;
   grid-column-start: 1;
   grid-column-end: 4;
 }
 
 #imageCarousel {
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row: 2;
   grid-column-start: 1;
   grid-column-end: 4;
 }
@@ -85,6 +85,67 @@ html {
   width: 60% !important;
 }
 
+/* CONTACTS */
+
+.contactContainer {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  grid-row-gap: 10px;
+}
+
+.contactImage {
+  width: 300px;
+  margin: auto;
+}
+
+/*Image swing*/
+.swing {
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.swing img {
+  border: 5px solid #f8f8f8;
+  display: block;
+}
+.swing:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+/* nail */
+.swing:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* RSVP */
 .rsvpContainer {
   background-color: rgba(255, 255, 255, 70%);
   padding: 5% 3% 5% 3%;
@@ -97,16 +158,14 @@ html {
 }
 
 #rsvpHeader {
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row: 1;
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
 }
 
 #rsvpP {
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row: 2;
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
