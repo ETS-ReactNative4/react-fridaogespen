@@ -32,9 +32,7 @@ class NavBar extends React.Component {
     });
   }
 
-  showPage() {
-    
-  }
+  showPage() {}
 
   render() {
     return (
@@ -43,26 +41,40 @@ class NavBar extends React.Component {
           <NavbarBrand id="navbarHeader">
             <strong>Frida&Espen</strong>
           </NavbarBrand>
-          {!this.state.isWideEnough && <NavbarToggler onClick={this.collapseOnClick} />}
+          {!this.state.isWideEnough && (
+            <NavbarToggler onClick={this.collapseOnClick} />
+          )}
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav center id="navbarItemlist">
-              <NavItem active>
-                <NavLink className="navLink" value="frontPage" to="#">Forside</NavLink>
+              {/* <NavItem>
+                <NavLink className="navLink" value="frontPage" to="#">
+                  Forside
+                </NavLink>
+              </NavItem> */}
+              <NavItem>
+                <NavLink className="navLink" to="#">
+                  Bilder
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navLink" to="#">Bilder</NavLink>
+                <NavLink className="navLink" to="#">
+                  Bryllupsside
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navLink" to="#">Bryllupsside</NavLink>
+                <NavLink className="navLink" to="#">
+                  Ønskeliste
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navLink" to="#">Ønskeliste</NavLink>
+                <NavLink className="navLink" to="#">
+                  Kontakter
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navLink" to="#">Kontakter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navLink" to="#">RSVP</NavLink>
+                <NavLink className="navLink" to="#">
+                  RSVP
+                </NavLink>
               </NavItem>
             </NavbarNav>
           </Collapse>
