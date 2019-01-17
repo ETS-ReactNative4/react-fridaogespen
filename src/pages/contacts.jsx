@@ -111,13 +111,13 @@ class Contacts extends Component {
         <div className="contact">
           <h3>Henrik Thomas Leung Huse</h3>
           <div className="contactImage">
-            {/* <figure class="swing">
-          <img
-            alt=""
-            src={require("../images/contacts/henrik.JPG")}
-            width="300"
-          />
-        </figure> */}
+            <figure class="swing">
+              <img
+                alt=""
+                src={require("../images/contacts/henrik.jpeg")}
+                width="300"
+              />
+            </figure>
           </div>
         </div>
       </div>
