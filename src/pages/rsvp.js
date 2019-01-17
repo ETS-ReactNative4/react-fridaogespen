@@ -5,7 +5,7 @@ export default class RSVP extends Component {
     //const { people, person } = this.state;
 
     return (
-      <div className="rsvpContainer">
+      <div className="pageContainer">
         <h1 id="rsvpHeader">RSVP</h1>
         <p id="rsvpP">
           Svar gjerne om du kommer i bryllupet vårt her også, selv om du
