@@ -31,7 +31,8 @@ class NavBar extends React.Component {
       <Navbar light expand="md" scrolling id="navbarContainer">
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
-            <strong>Frida&Espen</strong>
+            {/* <strong>Frida ❤ Espen</strong><p id="navbarP">️03.08.19</p> */}
+            <strong>Frida&Espen ❤ 03.08.19</strong>
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
@@ -39,16 +40,11 @@ class NavBar extends React.Component {
         )}
         <Collapse isOpen={this.state.collapse} navbar>
           <NavbarNav center id="navbarItemlist">
-          
             <NavItem>
-              <NavLink
-              className="navLink"
-              to="/"
-              onClick={this.togglePages}>
+              <NavLink className="navLink" to="/" onClick={this.togglePages}>
                 Forside
               </NavLink>
             </NavItem>
-
             <NavItem>
               <NavLink
                 className="navLink"
