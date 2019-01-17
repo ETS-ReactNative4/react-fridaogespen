@@ -46,11 +46,6 @@ class NavBar extends React.Component {
           )}
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav center id="navbarItemlist">
-              {/* <NavItem>
-                <NavLink className="navLink" value="frontPage" to="#">
-                  Forside
-                </NavLink>
-              </NavItem> */}
               <NavItem>
                 <NavLink className="navLink" to="#">
                   Bilder
@@ -58,7 +53,7 @@ class NavBar extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink className="navLink" to="#">
-                  Bryllupsside
+                  Bryllupshelgen
                 </NavLink>
               </NavItem>
               <NavItem>
