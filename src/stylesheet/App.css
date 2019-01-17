@@ -33,7 +33,7 @@ html {
 }
 
 #navbarContainer {
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.6);
 }
 .navbar  {
   padding: 0rem 1rem !important;
@@ -57,12 +57,12 @@ html {
 }
 
 .pageContainer {
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.6);
   padding: 5%;
   margin-bottom: 20px;
-  -o-background-color: rgba(255, 255, 255, 0.5);
-  -moz-background-color: rgba(255, 255, 255, 0.5);
-  -webkit-background-color: rgba(255, 255, 255, 0.5);
+  -o-background-color: rgba(255, 255, 255, 0.6);
+  -moz-background-color: rgba(255, 255, 255, 0.6);
+  -webkit-background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* IMAGES */
