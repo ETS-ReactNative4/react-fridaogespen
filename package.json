@@ -1,21 +1,30 @@
 {
   "name": "react-fridaogespen",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://www.fridaogespen.no/",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "mdbreact": "^4.8.1",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-navbar": "^3.0.0",
-    "react-scripts": "2.0.5"
+    "react-responsive-carousel": "^3.1.45",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5",
+    "react-toggle-display": "^2.2.0",
+    "req-flash": "0.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js",
+    "startit": "PORT=3306 node src/server/server.js",
+    "dev": "NODE_ENV=test PORT=3306 nodemon server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
