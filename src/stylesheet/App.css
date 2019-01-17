@@ -35,10 +35,14 @@ html {
 #navbarContainer {
   background-color: rgba(255,255,255, 0.5);
 }
+.navbar  {
+  padding: 0rem 1rem !important;
+}
 
 #navbarHeader {
-  color: black;
-}
+  margin: 0;
+  font-size: 18px;
+  color: black;}
 
 #navbarItemlist {
   margin-left: 10%;

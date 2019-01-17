@@ -31,7 +31,8 @@ class NavBar extends React.Component {
       <Navbar light expand="md" scrolling id="navbarContainer">
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
-            <strong>Frida&Espen</strong>
+            {/* <strong>Frida ❤ Espen</strong><p id="navbarP">️03.08.19</p> */}
+            <strong>Frida&Espen ❤ 03.08.19</strong>
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
