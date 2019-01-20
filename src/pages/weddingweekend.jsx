@@ -33,8 +33,7 @@ class WeddingWeekend extends Component {
 
         <h2>Ankomst</h2>
         <p>
-          Askeladden Reiser kjører buss fra Gardermoen til Klækken Hotell.
-          <br />{" "}
+          Askeladden Reiser kjører buss fra Gardermoen til Klækken Hotell.{" "}
           <a
             href="https://askeladden.net/flybuss/"
             target="_blank"
@@ -95,7 +94,6 @@ class WeddingWeekend extends Component {
         <h2>Arrival</h2>
         <p>
           Askeladden Reiser drives busses from Gardermoen to Klækken Hotel.{" "}
-          <br />{" "}
           <a
             href="https://askeladden.net/flybuss/"
             target="_blank"

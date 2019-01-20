@@ -105,7 +105,7 @@ html {
 }
 
 .contactImage {
-  width: 300px;
+  width: 200px;
   margin: auto;
 }
 
@@ -195,6 +195,9 @@ html {
   body {
     background-position: 20% 0;
   }
+  #navbarHeader {
+    font-size: 16px;
+  }
   #navbarItemlist {
     margin-left: 0;
   }
@@ -218,7 +221,6 @@ html {
     margin: 0 !important;
     width: 100% !important;
   }
-
   #rsvpForm {
     height: 1280px;
   }
