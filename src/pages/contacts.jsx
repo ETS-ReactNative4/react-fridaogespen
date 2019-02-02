@@ -8,9 +8,14 @@ class Contacts extends Component {
         <h1>Kontakter</h1>
         <h2>Toastmastere</h2>
         <p>
-          Hvis noen ønsker å bidra med underholdning i form av taler eller annet
-          kan dere ta kontakt med toastmasterne, så setter de opp en plan for
+          Hvis du ønsker å bidra med underholdning i form av taler eller annet
+          kan du ta kontakt med toastmasterne, så setter de opp en plan for
           dagen.
+        </p>
+        <p>
+          If you want to contribute with entertainment in the form of speeches
+          or something else, please contact our toastmasters, and they will set
+          up a plan.
         </p>
 
         <div className="contact">
