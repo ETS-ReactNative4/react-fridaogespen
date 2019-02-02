@@ -6,12 +6,13 @@ class WeddingWeekend extends Component {
     return (
       <div className="pageContainer">
         <h1>Bryllupshelgen</h1>
-        <p>For english, please scroll down.</p>
+        <p>For English, please scroll further down.</p>
 
         <h2>Hotell</h2>
         <p>
           Bryllupshelgen foregår på{" "}
           <a
+            className="weddingweekendLink"
             href="https://www.klaekken.no/"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,6 +30,7 @@ class WeddingWeekend extends Component {
           Det går flybuss, Askeladden Reiser, fra Gardermoen til Klækken Hotell.{" "}
           <br />{" "}
           <a
+            className="weddingweekendLink"
             href="https://askeladden.net/flybuss/"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,18 +39,19 @@ class WeddingWeekend extends Component {
           </a>
         </p>
 
-        <h2>Fredag 02. August</h2>
+        <h2>Fredag 02. august</h2>
         <p>
           På fredagskvelden arrangeres det grillkveld på Klækken hotell klokken
           19.00 med quiz i etterkant. Middagen er valgfri og koster 295,- per
           person. Hvis det er fint vær sitter vi ute, og Klækken setter opp en
           utebar for oss.
-          <br />
+        </p>
+        <p>
           Dersom du ikke ønsker å delta på middagen kan du likevel være med på
           quizen etterpå. Husk da å huk av for underholdning i svarkortet.
         </p>
 
-        <h2>Lørdag 03. August</h2>
+        <h2>Lørdag 03. august</h2>
         <p>Vielsen finner sted klokken 13.00 i Norderhov Kirke.</p>
         <p>
           Bryllupsmottakelsen vil være på Klækken Hotell rundt klokken 16.00.
@@ -87,6 +90,7 @@ class WeddingWeekend extends Component {
         <p>
           The wedding weeking takes place at{" "}
           <a
+            className="weddingweekendLink"
             href="https://www.klaekken.no/"
             target="_blank"
             rel="noopener noreferrer"
@@ -102,6 +106,7 @@ class WeddingWeekend extends Component {
           Askeladden Reiser drives busses from Gardermoen to Klækken Hotel.{" "}
           <br />{" "}
           <a
+            className="weddingweekendLink"
             href="https://askeladden.net/flybuss/"
             target="_blank"
             rel="noopener noreferrer"
@@ -116,7 +121,8 @@ class WeddingWeekend extends Component {
           after dinner quiz. The dinner is optional and costs 295 NOK per
           person. If the weather allows it, we will be sitting outside, and
           Klækken will set up a bar for us outside as well.
-          <br />
+        </p>
+        <p>
           If you don't prefer to eat dinner, you can still participate in the
           quiz. Remember to check the checkbox in the RSVP("Svarkort") for
           "entertainment".

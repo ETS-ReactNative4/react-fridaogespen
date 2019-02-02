@@ -72,12 +72,28 @@ html {
 }
 
 .pageContainer {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 5%;
   margin-bottom: 20px;
   -o-background-color: rgba(255, 255, 255, 0.6);
   -moz-background-color: rgba(255, 255, 255, 0.6);
   -webkit-background-color: rgba(255, 255, 255, 0.6);
+}
+
+h1, h2, h3 {
+  font-family: 'Italianno', cursive;
+}
+
+h1 {
+  font-size: 4.2em;
+}
+
+h2 {
+  font-size: 3.2em;
+}
+
+h3 {
+  font-size: 2.8em;
 }
 
 /* HOME */
@@ -115,6 +131,29 @@ html {
 .carousel.carousel-slider {
   margin: auto !important;
   width: 90% !important;
+}
+
+/* WEDDINGWEEKEND */
+.weddingweekendLink {
+  text-decoration: underline;
+  color: black;
+}
+
+.weddingweekendLink:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* WISHLIST */
+.wishlistLink {
+  color: black;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.wishlistLink:hover {
+  text-decoration: none;
+  color: black;
 }
 
 /* CONTACTS */
