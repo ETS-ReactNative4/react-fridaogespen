@@ -18,22 +18,15 @@ class WeddingWeekend extends Component {
           >
             Klækken Hotell
           </a>{" "}
-          i Hønefoss. Alle gjester som ønsker å bo der kan kontakte Klækken for
-          å booke rom ved å ringe 321 40 000. For rabatt kan dere oppgi at dere
-          skal i vårt bryllup.
-        </p>
-
-        <h2>Barn</h2>
-        <p>
-          Vi ordner lekerom for de minste, og de kan gjerne ta med en
-          favorittleke eller to. Alle barn som vil ha egen barnemeny må kontakte
-          oss, hvis ikke får de en barneversjon av den egentlige menyen. Ta også
-          kontakt hvis noen barn/babyer trenger barnestol.
+          i Hønefoss. Alle gjester som ønsker å bo på hotellet kan kontakte
+          Klækken for å booke rom ved å ringe 321 40 000. For å få ekstra
+          rabatter kan dere oppgi at dere skal overnatte på hotellet i anledning
+          vårt bryllup.
         </p>
 
         <h2>Ankomst</h2>
         <p>
-          Askeladden Reiser kjører buss fra Gardermoen til Klækken Hotell.
+          Det går flybuss, Askeladden Reiser, fra Gardermoen til Klækken Hotell.{" "}
           <br />{" "}
           <a
             href="https://askeladden.net/flybuss/"
@@ -46,27 +39,49 @@ class WeddingWeekend extends Component {
 
         <h2>Fredag 02. August</h2>
         <p>
-          Kl 19.00 arrangeres det grillkveld på Klækken Hotell med quiz etter
-          middagen. Middagen er valgfri og koster 295,- per person. Hvis det er
-          fint vær sitter vi ute, og Klækken stiller da opp med bar ute for oss.
+          På fredagskvelden arrangeres det grillkveld på Klækken hotell klokken
+          19.00 med quiz i etterkant. Middagen er valgfri og koster 295,- per
+          person. Hvis det er fint vær sitter vi ute, og Klækken setter opp en
+          utebar for oss.
           <br />
-          Dersom du ikke ønsker å spise middag kan du allikevel være med på
-          quizen. Husk da å huk av for underholdning i RSVP.
+          Dersom du ikke ønsker å delta på middagen kan du likevel være med på
+          quizen etterpå. Husk da å huk av for underholdning i svarkortet.
         </p>
 
         <h2>Lørdag 03. August</h2>
+        <p>Vielsen finner sted klokken 13.00 i Norderhov Kirke.</p>
         <p>
-          Kl 13.00 gifter vi oss i Norderhov Kirke. Bryllupsmottakelsen vil være
-          på Klækken Hotell ca kl 16.00, og vi går til bords rundt kl 16.30 hvor
-          det blir servert treretters meny.
-          <br />
-          Alle med allergier må si ifra ved å skrive det under "Alleriger" i
-          RSVP, eller kontakte oss direkte. Kaffegjestene er invitert til kl
-          20.30, men må gjerne komme i vielsen også.
+          Bryllupsmottakelsen vil være på Klækken Hotell rundt klokken 16.00.
+          Toastmastere og forlovere vil samle alle sammen ute i hagen på Klækken
+          for mottakelsen.
+        </p>
+        <p>
+          Vi går til bords rundt klokken 16.30 hvor det blir servert treretters
+          meny.
+        </p>
+        <p>
+          Alle med allergier, intoleranse eller andre matpreferanser må si ifra
+          ved å skrive det under "Alleriger" i svarkortet, eller kontakte oss
+          direkte.
+        </p>
+        <p>
+          Vi må få beskjed hvis det er noen barn som ønsker egen tilrettelagt
+          barnemeny, hvis ikke vil en barneversjon av den egentlige menyen
+          serveres. Dersom det er noen barn som ønsker voksenporsjon må vi også
+          få beskjed om det. Ta også kontakt dersom noen av barna har behov for
+          en barnestol.
+        </p>
+        <p>
+          Klækken er også behjelpelig med å sette opp et lekerom for de minste i
+          underetasjen. Alle barn er også velkomne til å ta med en favorittleke
+          eller to.
+        </p>
+        <p>
+          Kaffegjestene er invitert til bryllupsfesten klokken 20.30, men er
+          hjertelig velkomne til vielsen også, og selvfølgelig til å overnatte
+          på Klækken hvis det er ønskelig.
         </p>
         <br />
-
-        {/* English */}
         <h1>The Wedding Weekend</h1>
         <h2>Hotel</h2>
         <p>
@@ -78,20 +93,10 @@ class WeddingWeekend extends Component {
           >
             Klækken Hotell
           </a>{" "}
-          in Hønefoss. All guests who wish to stay there can contact Klækken to
-          book rooms by calling (+47) 321 40 000. For a discount you can state
-          that you going to our wedding.
+          in Hønefoss. All our guests who wish to stay at Klækken for the
+          weekend can contact Klækken by calling (+47) 321 40 000. For a
+          discount you can state that you are going to our wedding.
         </p>
-
-        <h2>Children</h2>
-        <p>
-          We arrange a playroom for the little ones, and they can gladly bring
-          one favorite toy or two. All children who want their own children's
-          menu must contact us, if not they get a children's version of the
-          actual menu. Please contact us if any children / babies need a high
-          chair.
-        </p>
-
         <h2>Arrival</h2>
         <p>
           Askeladden Reiser drives busses from Gardermoen to Klækken Hotel.{" "}
@@ -105,27 +110,35 @@ class WeddingWeekend extends Component {
           </a>
         </p>
 
-        <h2>Friday, 2nd of August</h2>
+        <h2>Friday 02. August</h2>
         <p>
-          At 7 PM there will be arranged a barbeque at Klækken Hotel with an
+          There will be arranged a barbeque at Klækken Hotel at 7 PM with an
           after dinner quiz. The dinner is optional and costs 295 NOK per
           person. If the weather allows it, we will be sitting outside, and
-          Klækken will set up a bar for us outside.
+          Klækken will set up a bar for us outside as well.
           <br />
-          If you don't want to eat dinner, you can still participate in the
-          quiz. Remember then to tick off the RSVP for "entertainment".
+          If you don't prefer to eat dinner, you can still participate in the
+          quiz. Remember to check the checkbox in the RSVP("Svarkort") for
+          "entertainment".
         </p>
-
-        <h2>Saturday, 3rd of August</h2>
+        <h2>Saturday 03. August</h2>
+        <p>The wedding ceremony starts at 1 PM in Norderhov Church.</p>
         <p>
-          The wedding ceremony starts at 1 PM in Norderhov Church. The wedding
-          reception will be at Klækken Hotel around 4 PM, and the dinner is
-          served around 4.30 PM, where a three-course menu will be served.
-          <br />
-          If you have any allergies, please let us know by writing it in the
-          textfield labeled "Allergies" in the RSVP-form, or contact us
-          directly. The coffeeguests are invited to 8.30 PM, but are invited to
-          the ceremony aswell.
+          The wedding reception takes place at Klækken Hotel around 4 PM. Our
+          toastmasters will gather everyone outside for the reception.
+        </p>
+        <p>
+          The dinner will be ready at 4.30-5 PM, where a three-course menu will
+          be served.
+        </p>
+        <p>
+          If you have any allergies or foodpreferance please let us know by
+          writing in the textfield labeled "Allergies" in the RSVP-form, or
+          contact us directly.
+        </p>
+        <p>
+          The coffeeguests are invited at 8.30 PM, but are welcome to the
+          ceremony as well.
         </p>
       </div>
     );
