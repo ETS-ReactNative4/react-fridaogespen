@@ -32,7 +32,12 @@ class NavBar extends React.Component {
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
             {/* <strong>Frida ❤ Espen</strong><p id="navbarP">️03.08.19</p> */}
-            <strong>Frida&Espen ❤ 03.08.19</strong>
+            {/*             <strong>Frida&Espen ❤ 03.08.19</strong>*/}
+            <img
+                alt=""
+                src={require("../images/navbarImg/navbarFrida&EspenText.png")}
+                width="300"
+              />
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
