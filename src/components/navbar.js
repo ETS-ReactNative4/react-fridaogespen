@@ -31,13 +31,12 @@ class NavBar extends React.Component {
       <Navbar light expand="md" scrolling id="navbarContainer">
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
-            {/* <strong>Frida ❤ Espen</strong><p id="navbarP">️03.08.19</p> */}
-            {/*             <strong>Frida&Espen ❤ 03.08.19</strong>*/}
-            <img
-                alt=""
-                src={require("../images/navbarImg/navbarFrida&EspenText.png")}
-                width="300"
-              />
+            <p id="navbarNames">Frida{"      "}<img
+              id="navbarImg"
+              alt=""
+              src={require("../images/navbarImg/navbarHeart.png")}
+              width="20"
+            /> Espen</p>
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
@@ -88,7 +87,7 @@ class NavBar extends React.Component {
                 to="/rsvp"
                 onClick={this.togglePages}
               >
-                RSVP
+                Svarkort
               </NavLink>
             </NavItem>
           </NavbarNav>
