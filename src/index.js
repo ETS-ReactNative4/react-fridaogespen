@@ -4,8 +4,15 @@ import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import "./stylesheet/App.css";
 import { BrowserRouter } from "react-router-dom";
+import WebFont from "webfontloader";
 
-/* ReactDOM.render(<App />, document.getElementById("root")); */
+WebFont.load({
+  google: {
+    families: [
+      "Italianno"
+    ]
+  }
+});
 
 ReactDOM.render(
   <BrowserRouter>

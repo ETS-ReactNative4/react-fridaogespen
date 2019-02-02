@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/IMG_1764_2.jpg");
+  background-image: url("../images/IMG_1764_3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -o-background-size: cover;
@@ -41,14 +41,28 @@ html {
 
 #navbarHeader {
   margin: 0;
-  font-size: 18px;
   color: black;
+  font-weight: lighter;
+  font-family: none;
 }
 
-#navbarItemlist {
-  margin-left: 10%;
+#navbarNames {
+  font-family: 'Italianno', cursive;
+  font-size: 34px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
 }
 
+#navbarImg {
+  padding-left: 0.5px;
+}
+
+.nav-link {
+  padding: 0rem 1rem;
+  font-family: 'Italianno', cursive;
+  font-size: 30px;
+
+}
 /* PAGES */
 #pagesContainer {
   grid-column-start: 3;
@@ -64,6 +78,13 @@ html {
   -o-background-color: rgba(255, 255, 255, 0.6);
   -moz-background-color: rgba(255, 255, 255, 0.6);
   -webkit-background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* HOME */
+#homeContainer {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* IMAGES */
@@ -210,6 +231,12 @@ html {
   #pagesContainer {
     grid-column-start: 2;
     grid-column-end: 3;
+  }
+  #navbarNames {
+    font-size: 24px;
+  }
+  #navbarDate {
+    font-size: 20px;
   }
   #navbarItemlist {
     margin-left: 0;
