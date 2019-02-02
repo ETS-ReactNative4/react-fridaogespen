@@ -53,7 +53,7 @@ class NavBar extends React.Component {
             <NavItem>
               <NavLink
                 className="navLink"
-                to="/weddingday"
+                to="/weddingweekend"
                 onClick={this.togglePages}
               >
                 Bryllupshelgen
