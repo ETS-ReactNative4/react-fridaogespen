@@ -22,13 +22,13 @@ class Contacts extends Component {
           <h3>Haakon Bjørge</h3>
           <p>(+47) 974 84 884</p>
           <div className="contactImage">
-            {/* <figure class="swing">
-            <img
-              alt=""
-              src={require("../images/contacts/haakon.JPG")}
-              width="300"
-            />
-          </figure> */}
+            <figure class="swing">
+              <img
+                alt=""
+                src={require("../images/contacts/haakon.jpeg")}
+                width="200"
+              />
+            </figure>
           </div>
         </div>
 
@@ -36,13 +36,13 @@ class Contacts extends Component {
           <h3>Cato Bang-Melchior</h3>
           <p>(+47) 976 69 620</p>
           <div className="contactImage">
-            {/* <figure class="swing">
-          <img
-            alt=""
-            src={require("../images/contacts/cato.JPG")}
-            width="300"
-          />
-        </figure> */}
+            <figure class="swing">
+              <img
+                alt=""
+                src={require("../images/contacts/cato.jpeg")}
+                width="200"
+              />
+            </figure>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/agnete.JPG")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>
@@ -68,7 +68,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/tove.JPG")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>
@@ -81,7 +81,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/johanne.JPG")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>
@@ -94,7 +94,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/sigve.JPG")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>
@@ -107,7 +107,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/frank.JPG")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>
@@ -120,7 +120,7 @@ class Contacts extends Component {
               <img
                 alt=""
                 src={require("../images/contacts/henrik.jpeg")}
-                width="300"
+                width="200"
               />
             </figure>
           </div>

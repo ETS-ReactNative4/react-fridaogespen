@@ -104,7 +104,6 @@ class WeddingWeekend extends Component {
         <h2>Arrival</h2>
         <p>
           Askeladden Reiser drives busses from Gardermoen to Klækken Hotel.{" "}
-          <br />{" "}
           <a
             className="weddingweekendLink"
             href="https://askeladden.net/flybuss/"
