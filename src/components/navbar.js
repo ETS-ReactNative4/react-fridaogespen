@@ -32,7 +32,8 @@ class NavBar extends React.Component {
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
             {/* <strong>Frida ❤ Espen</strong><p id="navbarP">️03.08.19</p> */}
-            <strong>Frida&Espen ❤ 03.08.19</strong>
+            <strong id="navbarNames">Frida&Espen ❤️ </strong>            
+            <strong id="navbarDate"> 03.08.19</strong>
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
@@ -83,7 +84,7 @@ class NavBar extends React.Component {
                 to="/rsvp"
                 onClick={this.togglePages}
               >
-                RSVP
+                Svarkort
               </NavLink>
             </NavItem>
           </NavbarNav>

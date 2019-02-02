@@ -6,7 +6,7 @@ export default class RSVP extends Component {
 
     return (
       <div className="pageContainer">
-        <h1 id="rsvpHeader">RSVP</h1>
+        <h1 id="rsvpHeader">Svarkort</h1>
         <p id="rsvpP">
           Svar gjerne om du kommer i bryllupet vårt, selv om du allerede har
           svart på svarkortet som fulgte med invitasjonen.

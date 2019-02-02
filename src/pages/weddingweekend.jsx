@@ -51,7 +51,7 @@ class WeddingWeekend extends Component {
           fint vær sitter vi ute, og Klækken stiller da opp med bar ute for oss.
           <br />
           Dersom du ikke ønsker å spise middag kan du allikevel være med på
-          quizen. Husk da å huk av for underholdning i RSVP.
+          quizen. Husk da å huk av for underholdning i svarkortet.
         </p>
 
         <h2>Lørdag 03. August</h2>
@@ -61,7 +61,7 @@ class WeddingWeekend extends Component {
           det blir servert treretters meny.
           <br />
           Alle med allergier må si ifra ved å skrive det under "Alleriger" i
-          RSVP, eller kontakte oss direkte. Kaffegjestene er invitert til kl
+          svarkortet, eller kontakte oss direkte. Kaffegjestene er invitert til kl
           20.30, men må gjerne komme i vielsen også.
         </p>
         <br />
@@ -113,7 +113,7 @@ class WeddingWeekend extends Component {
           Klækken will set up a bar for us outside.
           <br />
           If you don't want to eat dinner, you can still participate in the
-          quiz. Remember then to tick off the RSVP for "entertainment".
+          quiz. Remember then to tick off the RSVP("svarkort") for "entertainment".
         </p>
 
         <h2>Saturday, 3rd of August</h2>

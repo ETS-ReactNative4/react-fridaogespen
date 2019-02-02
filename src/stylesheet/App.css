@@ -41,14 +41,29 @@ html {
 
 #navbarHeader {
   margin: 0;
-  font-size: 18px;
   color: black;
+  font-weight: lighter;
+  /*font-family: 'Mr De Haviland', cursive;*/
+  font-family: none;
 }
+
+/* #navbarNames {
+  font-size: 34px;
+} */
+
+/* #navbarDate {
+  font-size: 20px;
+} */
 
 #navbarItemlist {
   margin-left: 10%;
 }
+.nav-link {
+  padding: 0rem 1rem;
+  font-family: 'Italianno', cursive;
+  font-size: 24px;
 
+}
 /* PAGES */
 #pagesContainer {
   grid-column-start: 3;
@@ -210,6 +225,12 @@ html {
   #pagesContainer {
     grid-column-start: 2;
     grid-column-end: 3;
+  }
+  #navbarNames {
+    font-size: 24px;
+  }
+  #navbarDate {
+    font-size: 20px;
   }
   #navbarItemlist {
     margin-left: 0;
