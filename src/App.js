@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./stylesheet/App.css";
 import NavBar from "./components/navbar.js";
-import Pages from "./pages/pages.js";
+import Pages from "./components/pages.js";
 
 class App extends Component {
   constructor(props) {

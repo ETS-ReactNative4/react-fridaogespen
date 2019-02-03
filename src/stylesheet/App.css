@@ -27,8 +27,7 @@ html {
   justify-content: center;
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row: 1;
   margin-top: 5px;
 }
 
@@ -67,8 +66,7 @@ html {
 #pagesContainer {
   grid-column-start: 3;
   grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  grid-row: 2;
 }
 
 .pageContainer {
@@ -243,8 +241,7 @@ h3 {
 }
 
 #rsvpForm {
-  grid-row-start: 3;
-  grid-row-end: 3;
+  grid-row: 3;
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100%;
@@ -255,9 +252,9 @@ h3 {
   body {
     background-position: 20% 0;
   }
-  #navbarHeader {
+/*   #navbarHeader {
     font-size: 16px;
-  }
+  } */
   #navbarItemlist {
     margin-left: 0;
   }

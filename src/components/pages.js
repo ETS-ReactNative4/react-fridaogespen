@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "../stylesheet/App.css";
-import Home from "./home.jsx";
-import Images from "./images.jsx";
-import WeddingWeekend from "./weddingweekend.jsx";
-import Wishlist from "./wishlist.jsx";
-import Contacts from "./contacts.jsx";
-import RSVP from "./rsvp.js";
+import Home from "../pages/home.jsx";
+import Images from "../pages/images.jsx";
+import WeddingWeekend from "../pages/weddingweekend.jsx";
+import Wishlist from "../pages/wishlist.jsx";
+import Contacts from "../pages/contacts.jsx";
+import RSVP from "../pages/rsvp.js";
 
 class Pages extends Component {
   render() {
