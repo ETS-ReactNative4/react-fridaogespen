@@ -25,7 +25,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/haakon.jpeg")}
+                src={require("../images/contacts/crop2_haakon.jpeg")}
                 width="200"
               />
             </figure>
@@ -39,7 +39,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/cato.jpeg")}
+                src={require("../images/contacts/crop2_cato.jpeg")}
                 width="200"
               />
             </figure>
@@ -54,7 +54,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/agnete.JPG")}
+                src={require("../images/contacts/crop2_agnete.JPG")}
                 width="200"
               />
             </figure>
@@ -67,7 +67,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/tove.JPG")}
+                src={require("../images/contacts/crop2_tove.JPG")}
                 width="200"
               />
             </figure>
@@ -80,7 +80,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/johanne.JPG")}
+                src={require("../images/contacts/crop_johanne.JPG")}
                 width="200"
               />
             </figure>
@@ -93,7 +93,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/sigve.JPG")}
+                src={require("../images/contacts/crop2_sigve.JPG")}
                 width="200"
               />
             </figure>
@@ -106,7 +106,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/frank.JPG")}
+                src={require("../images/contacts/crop2_frank.JPG")}
                 width="200"
               />
             </figure>
@@ -119,7 +119,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/henrik.jpeg")}
+                src={require("../images/contacts/crop2_henrik.jpeg")}
                 width="200"
               />
             </figure>
