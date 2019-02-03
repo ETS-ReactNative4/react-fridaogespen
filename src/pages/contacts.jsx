@@ -39,7 +39,7 @@ class Contacts extends Component {
             <figure class="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_cato.jpeg")}
+                src={require("../images/contacts/crop3_cato.JPG")}
                 width="200"
               />
             </figure>

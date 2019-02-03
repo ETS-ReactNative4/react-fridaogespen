@@ -110,6 +110,7 @@ class WeddingWeekend extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <br />
             The bustable can be read here
           </a>
         </p>
@@ -123,7 +124,7 @@ class WeddingWeekend extends Component {
         </p>
         <p>
           If you don't prefer to eat dinner, you can still participate in the
-          quiz. Remember to check the checkbox in the RSVP("Svarkort") for
+          quiz. Remember to check the checkbox in the "Svarkort"-tab for
           "entertainment".
         </p>
         <h2>Saturday 03. August</h2>
@@ -138,8 +139,8 @@ class WeddingWeekend extends Component {
         </p>
         <p>
           If you have any allergies or foodpreferance please let us know by
-          writing in the textfield labeled "Allergies" in the RSVP-form, or
-          contact us directly.
+          writing in the textfield labeled "Allergies" in the "Svarkort"-form,
+          or contact us directly.
         </p>
         <p>
           The coffeeguests are invited at 8.30 PM, but are welcome to the
