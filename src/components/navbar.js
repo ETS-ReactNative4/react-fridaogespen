@@ -31,19 +31,23 @@ class NavBar extends React.Component {
       <Navbar light expand="md" scrolling id="navbarContainer">
         <NavLink to="/">
           <NavbarBrand id="navbarHeader">
-            <p id="navbarNames">Frida{"      "}<img
-              id="navbarImg"
-              alt=""
-              src={require("../images/navbarImg/navbarHeart.png")}
-              width="20"
-            /> Espen</p>
+            <p id="navbarNames">
+              Frida{"      "}
+              <img
+                id="navbarImg"
+                alt=""
+                src={require("../images/navbarImg/navbarHeart.png")}
+                width="20"
+              />{" "}
+              Espen
+            </p>
           </NavbarBrand>
         </NavLink>
         {!this.state.isWideEnough && (
           <NavbarToggler onClick={this.collapseOnClick} />
         )}
         <Collapse isOpen={this.state.collapse} navbar>
-          <NavbarNav center id="navbarItemlist">
+          <NavbarNav center="true" id="navbarItemlist">
             <NavItem>
               <NavLink
                 className="navLink"

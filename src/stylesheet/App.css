@@ -46,7 +46,7 @@ html {
 }
 
 #navbarNames {
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-size: 34px;
   margin: 0;
   color: rgba(0, 0, 0, 0.5);
@@ -58,9 +58,8 @@ html {
 
 .nav-link {
   padding: 0rem 1rem;
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-size: 30px;
-
 }
 /* PAGES */
 #pagesContainer {
@@ -78,8 +77,10 @@ html {
   -webkit-background-color: rgba(255, 255, 255, 0.6);
 }
 
-h1, h2, h3 {
-  font-family: 'Italianno', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Italianno", cursive;
 }
 
 h1 {
@@ -250,7 +251,10 @@ h3 {
 
 @media screen and (max-width: 1000px) {
   body {
-    background-position: 20% 0;
+    background-position: 20%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #navbarItemlist {
     margin-left: 0;
@@ -258,7 +262,7 @@ h3 {
   .App {
     grid-template-columns: auto 90% auto;
     grid-row-gap: 15px;
-    grid-column-gap: 15px;
+    grid-column-gap: 0;
   }
   .appHeader {
     grid-column-start: 2;

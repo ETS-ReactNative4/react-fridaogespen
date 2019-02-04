@@ -22,10 +22,10 @@ class Contacts extends Component {
           <h3>Haakon Bjørge</h3>
           <p>(+47) 974 84 884</p>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_haakon.jpeg")}
+                src={require("../images/contacts/haakon.jpeg")}
                 width="200"
               />
             </figure>
@@ -36,10 +36,10 @@ class Contacts extends Component {
           <h3>Cato Bang-Melchior</h3>
           <p>(+47) 976 69 620</p>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop3_cato.JPG")}
+                src={require("../images/contacts/cato.JPG")}
                 width="200"
               />
             </figure>
@@ -51,10 +51,10 @@ class Contacts extends Component {
         <div className="contact">
           <h3>Agnete Eilertsen</h3>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_agnete.JPG")}
+                src={require("../images/contacts/agnete.JPG")}
                 width="200"
               />
             </figure>
@@ -64,10 +64,10 @@ class Contacts extends Component {
         <div className="contact">
           <h3>Tove Fagervold</h3>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_tove.JPG")}
+                src={require("../images/contacts/tove.JPG")}
                 width="200"
               />
             </figure>
@@ -77,10 +77,10 @@ class Contacts extends Component {
         <div>
           <h3>Johanne Kvivesen Aarnes</h3>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop_johanne.JPG")}
+                src={require("../images/contacts/johanne.JPG")}
                 width="200"
               />
             </figure>
@@ -89,11 +89,11 @@ class Contacts extends Component {
 
         <div className="contact">
           <h3>Sigve Eilertsen</h3>
-          <div class="contactImage">
-            <figure class="swing">
+          <div className="contactImage">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_sigve.JPG")}
+                src={require("../images/contacts/sigve.JPG")}
                 width="200"
               />
             </figure>
@@ -102,11 +102,11 @@ class Contacts extends Component {
 
         <div className="contact">
           <h3>Frank Robert Solheim</h3>
-          <div class="contactImage">
-            <figure class="swing">
+          <div className="contactImage">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_frank.JPG")}
+                src={require("../images/contacts/frank.JPG")}
                 width="200"
               />
             </figure>
@@ -116,10 +116,10 @@ class Contacts extends Component {
         <div className="contact">
           <h3>Henrik Thomas Leung Huse</h3>
           <div className="contactImage">
-            <figure class="swing">
+            <figure className="swing">
               <img
                 alt=""
-                src={require("../images/contacts/crop2_henrik.jpeg")}
+                src={require("../images/contacts/henrik.jpeg")}
                 width="200"
               />
             </figure>
