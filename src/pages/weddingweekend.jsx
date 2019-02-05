@@ -64,7 +64,7 @@ class WeddingWeekend extends Component {
         </p>
         <p>
           Alle med allergier, intoleranse eller andre matpreferanser må si ifra
-          ved å skrive det under "Alleriger" i svarkortet, eller kontakte oss
+          ved å skrive det under "Allergier" i svarkortet, eller kontakte oss
           direkte.
         </p>
         <p>

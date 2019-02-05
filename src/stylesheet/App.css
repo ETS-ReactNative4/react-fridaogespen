@@ -254,7 +254,7 @@ h3 {
     background-position: 20% 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
   #navbarItemlist {
     margin-left: 0;
